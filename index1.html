@@ -1,68 +1,138 @@
 <!DOCTYPE html>
-<html lang="en ">
-  <head>
-    <title>My Portfolio</title>
-  </head>
-  <body bgcolor="cyan">
-    <center>
-      <img src="Screenshot (275).png" style="width: 150px; height:150px"/>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anmol Pandey | Portfolio</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+    body{background:#111827;color:#e5e7eb;overflow-x:hidden;}
+    nav{position:fixed;top:0;left:0;width:100%;display:flex;justify-content:center;gap:30px;padding:18px;background:#1f2937;z-index:1000;}
+    nav a{color:#e5e7eb;text-decoration:none;font-weight:500;position:relative;}
+    nav a::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:2px;background:#facc15;transition:.3s;}
+    nav a:hover::after{width:100%;}
+    header{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;min-height:100vh;padding:100px 10%;background:linear-gradient(135deg,#0ea5e9,#8b5cf6);}
+    header .text{flex:1;min-width:300px;padding:20px;}
+    header h1{font-size:3rem;margin-bottom:10px;color:#facc15;}
+    header p{font-size:1.1rem;line-height:1.6;}
+    header .image{flex:1;min-width:250px;text-align:center;}
+    header .image img{max-width:300px;border-radius:50%;border:5px solid #facc15;box-shadow:0 0 20px rgba(250,204,21,0.6);}
+    section{padding:80px 10%;}
+    h2{font-size:2rem;margin-bottom:25px;position:relative;display:inline-block;}
+    h2::after{content:"";position:absolute;left:0;bottom:-8px;width:50%;height:3px;background:#0ea5e9;}
+    .about p{max-width:700px;}
+    .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:20px;margin-top:20px;}
+    .skill{background:#1f2937;padding:18px;border-radius:10px;text-align:center;transition:.3s;box-shadow:0 3px 6px rgba(0,0,0,0.4);}
+    .skill:hover{transform:translateY(-6px);background:#374151;}
+    .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;}
+    .project{background:#1f2937;border-radius:12px;overflow:hidden;transition:.3s;box-shadow:0 5px 12px rgba(0,0,0,0.5);}
+    .project:hover{transform:translateY(-8px);box-shadow:0 8px 20px rgba(14,165,233,0.5);}
+    .project img{width:100%;height:180px;object-fit:cover;}
+    .project-info{padding:15px;}
+    .contact form{display:flex;flex-direction:column;gap:15px;max-width:500px;margin:auto;}
+    .contact input,.contact textarea{padding:12px;border:none;border-radius:6px;background:#374151;color:#fff;outline:none;}
+    .contact input:focus,.contact textarea:focus{box-shadow:0 0 8px #0ea5e9;}
+    .contact button{padding:12px;border:none;border-radius:6px;background:#0ea5e9;color:#111827;font-weight:600;cursor:pointer;transition:.3s;}
+    .contact button:hover{background:#0284c7;}
+    footer{text-align:center;padding:20px;background:#1f2937;margin-top:40px;}
+  </style>
+</head>
+<body>
 
-    </center>
-  
-    <!-- Header Section -->
-    <header>
-      <h1>Welcome to My Portfolio</h1>
-      <p>Hi, I'm Anmol Pandey - Aspiring Full-Stack Developer</p>
-    </header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <!-- About Section -->
-    <section>
-      <h2>About Me</h2> 
-      <p>
-        Hello! I'm currently learning web development, and I'm passionate about creating functional and visually appealing websites. 
-        I'm excited to build projects and grow as a developer.
-      </p>
-    </section>
+  <header>
+    <div class="text">
+      <h1>Hi, I'm Anmol Pandey ✨</h1>
+      <p>An MCA graduate passionate about coding and problem-solving.  
+         Skilled in Java, DBMS, DSA, and MERN stack development.  
+         I create scalable applications and enjoy turning ideas into real-world projects.</p>
+    </div>
+    <div class="image">
+      <img src="myphoto.jpg" alt="Profile Photo">
+    </div>
+  </header>
 
-    <!-- Skills Section -->
-    <section>
-      <h2>Skills</h2>
-      <ul>
-        <li>HTML</li>
-        <li>CSS (Learning soon!)</li>
-        <li>JavaScript (Coming soon!)</li>
-        <li>Problem-Solving</li>
-      </ul>
-    </section>
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      I love exploring new technologies and solving challenging problems.  
+      Over time, I have built strong knowledge in Data Structures, Databases,  
+      and Object-Oriented Programming. My aim is to become a full-stack  
+      software developer and contribute to impactful projects.
+    </p>
+  </section>
 
-    <!-- Projects Section -->
-    <section>
-      <h2>Projects</h2>
-      <ul>
-        <li>
-          <strong>Personal Website:</strong> A simple webpage built with HTML.
-        </li>
-        <li>
-          <strong>To-Do List:</strong> A task organizer (coming soon!).
-        </li>
-        <li>
-          <strong>Portfolio Website:</strong> You're looking at it! 😊
-        </li>
-      </ul>
-    </section>
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill">Java</div>
+      <div class="skill">DBMS</div>
+      <div class="skill">DSA</div>
+      <div class="skill">Python</div>
+      <div class="skill">MERN Stack</div>
+      <div class="skill">SQL</div>
+      <div class="skill">OOP Concepts</div>
+      <div class="skill">Web Development</div>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section>
-      <h2>Contact Me</h2>
-      <p>Email: <a href="mailto:yourname@example.com">anmolpanndey@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/anmol-pandey-681811269/" target="_blank">linkedin.com/in/Anmol Pandey</a></p>
-    </section>
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project">
+        <img src="https://picsum.photos/400/200?random=12" alt="Project 1">
+        <div class="project-info">
+          <h3>Student Management System</h3>
+          <p>Java + MySQL project to manage student records with CRUD operations.</p>
+        </div>
+      </div>
+      <div class="project">
+        <img src="https://picsum.photos/400/200?random=13" alt="Project 2">
+        <div class="project-info">
+          <h3>Flask BMI Calculator</h3>
+          <p>Python Flask-based web app with BMI calculation and clean UI.</p>
+        </div>
+      </div>
+      <div class="project">
+        <img src="https://picsum.photos/400/200?random=14" alt="Project 3">
+        <div class="project-info">
+          <h3>Personal Portfolio</h3>
+          <p>Responsive portfolio website using HTML, CSS, and JavaScript.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer Section -->
-    <footer>
-      <p>©  2025 Anmol Pandey. All rights reserved.</p>
-    </footer>
-  </body>
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <form onsubmit="return sendMessage(event)">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Anmol Pandey | Designed with ❤️</p>
+  </footer>
+
+  <script>
+    function sendMessage(e){
+      e.preventDefault();
+      alert("Your message has been sent successfully!");
+      document.querySelector("form").reset();
+    }
+  </script>
+
+</body>
 </html>
+
 
 
