@@ -11,8 +11,8 @@
     nav a{color:#e5e7eb;text-decoration:none;font-weight:500;position:relative;}
     nav a::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:2px;background:#facc15;transition:.3s;}
     nav a:hover::after{width:100%;}
-    
-    /* ✅ Header with background image */
+
+    /* Header with background image */
     header {
       display: flex;
       flex-wrap: wrap;
@@ -27,39 +27,121 @@
       content: "";
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+      background: rgba(0, 0, 0, 0.6);
     }
     header .text, header .image {
       position: relative;
-      z-index: 1; /* Keeps text & photo above overlay */
+      z-index: 1;
     }
     header .text{flex:1;min-width:300px;padding:20px;}
     header h1{font-size:3rem;margin-bottom:10px;color:#facc15;}
-    header p{font-size:1.1rem;line-height:1.6;}
+    header p{font-size:1.2rem;line-height:1.8;}
     header .image{flex:1;min-width:250px;text-align:center;}
-    header .image img{max-width:300px;border-radius:50%;border:5px solid #facc15;box-shadow:0 0 20px rgba(250,204,21,0.6);}
-    
+    header .image img{max-width:300px;border-radius:12px;border:5px solid #facc15;box-shadow:0 0 20px rgba(250,204,21,0.6);}
+
     section{padding:80px 10%;}
-    h2{font-size:2rem;margin-bottom:25px;position:relative;display:inline-block;}
-    h2::after{content:"";position:absolute;left:0;bottom:-8px;width:50%;height:3px;background:#0ea5e9;}
-    .about p{max-width:700px;}
-    
-    .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:20px;margin-top:20px;}
-    .skill{background:#1f2937;padding:18px;border-radius:10px;text-align:center;transition:.3s;box-shadow:0 3px 6px rgba(0,0,0,0.4);}
-    .skill:hover{transform:translateY(-6px);background:#374151;}
-    
-    .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;}
-    .project{background:#1f2937;border-radius:12px;overflow:hidden;transition:.3s;box-shadow:0 5px 12px rgba(0,0,0,0.5);}
-    .project:hover{transform:translateY(-8px);box-shadow:0 8px 20px rgba(14,165,233,0.5);}
-    .project img{width:100%;height:180px;object-fit:cover;}
-    .project-info{padding:15px;}
-    
-    .contact form{display:flex;flex-direction:column;gap:15px;max-width:500px;margin:auto;}
-    .contact input,.contact textarea{padding:12px;border:none;border-radius:6px;background:#374151;color:#fff;outline:none;}
-    .contact input:focus,.contact textarea:focus{box-shadow:0 0 8px #0ea5e9;}
-    .contact button{padding:12px;border:none;border-radius:6px;background:#0ea5e9;color:#111827;font-weight:600;cursor:pointer;transition:.3s;}
+
+    /* About Me */
+    .about h2 {
+    font-size: 2rem;
+    color: #facc15;
+    margin-bottom: 20px; /* space below heading */
+}
+.about p {
+    max-width: 700px;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 15px; /* space between paragraphs */
+}
+
+    .about p{max-width:700px; font-size:1.15rem;}
+
+    /* Skills Section */
+    .skills h2{font-size:2rem; margin-bottom:10px; text-align:center; color:#facc15;}
+    .skills p{text-align:center; max-width:600px; margin:0 auto 30px; font-size:1.1rem; color:#cbd5e1;}
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    .skill {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 14px;
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #facc15;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .skill:hover {
+      transform: translateY(-8px) scale(1.05);
+      background: rgba(14,165,233,0.2);
+      color: #fff;
+      box-shadow: 0 10px 25px rgba(14,165,233,0.5);
+    }
+
+    /* Projects Section */
+    .projects h2{font-size:2.2rem;margin-bottom:20px;color:#facc15;text-align:center;}
+    .projects p{text-align:center; max-width:600px; margin:0 auto 30px; font-size:1.1rem; color:#cbd5e1;}
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    .project {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 14px;
+      overflow: hidden;
+      text-align: left;
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+      transition: all 0.3s ease;
+    }
+    .project:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 28px rgba(14,165,233,0.5);
+    }
+    .project img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .project-info {
+      padding: 20px;
+    }
+    .project-info h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #facc15;
+    }
+    .project-info p {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #cbd5e1;
+    }
+
+    /* Contact Section */
+    .contact h2{text-align:center; font-size:2rem; color:#facc15;}
+    .contact p{text-align:center; max-width:600px; margin:10px auto 30px; font-size:1.1rem; color:#cbd5e1;}
+    .contact div{
+      background:#1f2937; padding:30px; border-radius:12px; max-width:600px; margin:auto; box-shadow:0 6px 18px rgba(0,0,0,0.5);
+    }
+    .contact form{display:flex;flex-direction:column;gap:18px;}
+    .contact input,.contact textarea{
+      width:100%;padding:14px 14px 14px 40px;border:none;border-radius:8px;background:#374151;color:#fff;outline:none;
+    }
+    .contact button{
+      padding:14px;border:none;border-radius:8px;background:#0ea5e9;color:#111827;font-weight:700;cursor:pointer;transition:.3s;font-size:1rem;
+    }
     .contact button:hover{background:#0284c7;}
-    
+
     footer{text-align:center;padding:20px;background:#1f2937;margin-top:40px;}
   </style>
 </head>
@@ -75,75 +157,118 @@
   <header>
     <div class="text">
       <h1>Hi, I'm Anmol Pandey ✨</h1>
-      <p>An MCA graduate passionate about coding and problem-solving.  
-         Skilled in Java, DBMS, DSA, and MERN stack development.  
-         I create scalable applications and enjoy turning ideas into real-world projects.</p>
+      <p>An MCA graduate learning Web Development.  
+         Skilled in HTML, CSS, JavaScript, Python, Java, DBMS, DSA, and MERN stack.  
+         I create interactive projects and continuously improve my coding skills.</p>
     </div>
     <div class="image">
       <img src="myphoto.jpg" alt="Profile Photo">
     </div>
   </header>
 
-  <section id="about" class="about">
-    <h2>About Me</h2>
-    <p>
-      I love exploring new technologies and solving challenging problems.  
-      Over time, I have built strong knowledge in Data Structures, Databases,  
-      and Object-Oriented Programming. My aim is to become a full-stack  
-      software developer and contribute to impactful projects.
-    </p>
-  </section>
+<section id="about" class="about">
+  <h2>About Me</h2>
+  <p>
+    Hi! I’m <b>Anmol Pandey</b>, an MCA graduate passionate about technology and coding.  
+    I’m currently learning <b>Web Development</b> with a focus on the <b>MERN stack</b>,  
+    while also strengthening my skills in <b>Java, DBMS, and DSA</b>.
+  </p>
+  <p>
+    I enjoy building projects that turn ideas into reality and love exploring new tools  
+    and technologies. My aim is to become a <b>full-stack developer</b> and contribute  
+    to real-world applications that make an impact.
+  </p>
+</section>
+
+
 
   <section id="skills" class="skills">
     <h2>Skills</h2>
+    <p>Here are the technologies and tools I work with:</p>
     <div class="skills-grid">
-      <div class="skill">Java</div>
-      <div class="skill">DBMS</div>
-      <div class="skill">DSA</div>
-      <div class="skill">Python</div>
-      <div class="skill">MERN Stack</div>
-      <div class="skill">SQL</div>
-      <div class="skill">OOP Concepts</div>
-      <div class="skill">Web Development</div>
+      <div class="skill">💻 Java</div>
+      <div class="skill">🗄️ DBMS</div>
+      <div class="skill">⚡ DSA</div>
+      <div class="skill">🐍 Python</div>
+      <div class="skill">🌐 MERN Stack</div>
+      <div class="skill">📝 SQL</div>
+      <div class="skill">📦 OOP Concepts</div>
+      <div class="skill">🎨 Web Development</div>
     </div>
   </section>
 
   <section id="projects" class="projects">
     <h2>Projects</h2>
     <div class="projects-grid">
+
+      <!-- Project 1 -->
       <div class="project">
-        <img src="https://picsum.photos/400/200?random=12" alt="Project 1">
+        <img src="https://picsum.photos/400/200?random=21" alt="LearnEasy Project">
         <div class="project-info">
-          <h3>Student Management System</h3>
-          <p>Java + MySQL project to manage student records with CRUD operations.</p>
+          <h3>LearnEasy – Online Tutorials & Job Notifications</h3>
+          <p>A web platform where students can learn from tutorials and stay updated with the latest job opportunities.</p>
+          <p><b>Tech Stack:</b> HTML, CSS, JavaScript</p>
         </div>
       </div>
+
+      <!-- Project 2 -->
       <div class="project">
-        <img src="https://picsum.photos/400/200?random=13" alt="Project 2">
+        <img src="https://picsum.photos/400/200?random=22" alt="Music Player Project">
         <div class="project-info">
-          <h3>Flask BMI Calculator</h3>
-          <p>Python Flask-based web app with BMI calculation and clean UI.</p>
+          <h3>Mini Music Player System</h3>
+          <p>A simple yet interactive music player that allows users to play, pause, and navigate through songs with a clean UI.</p>
+          <p><b>Tech Stack:</b> HTML, CSS, JavaScript</p>
         </div>
       </div>
+
+      <!-- Project 3 -->
       <div class="project">
-        <img src="https://picsum.photos/400/200?random=14" alt="Project 3">
+        <img src="https://picsum.photos/400/200?random=23" alt="Face Recognition Attendance System">
         <div class="project-info">
-          <h3>Personal Portfolio</h3>
-          <p>Responsive portfolio website using HTML, CSS, and JavaScript.</p>
+          <h3>Face Recognition Attendance System</h3>
+          <p>A smart attendance system that marks student attendance through face recognition technology.</p>
+          <p><b>Tech Stack:</b> Python, HTML, CSS, JavaScript</p>
         </div>
       </div>
+
     </div>
   </section>
 
-  <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <form onsubmit="return sendMessage(event)">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="email" id="email" placeholder="Your Email" required>
-      <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
+<section id="contact" class="contact">
+  <h2>Contact Me</h2>
+  <p style="text-align:center; max-width:600px; margin:10px auto 30px; font-size:1.1rem; color:#cbd5e1;">
+    Have a question or want to work together? Fill out the form below and I’ll get back to you soon!
+  </p>
+
+  <div style="background:#1f2937; padding:30px; border-radius:12px; max-width:600px; margin:auto; box-shadow:0 6px 18px rgba(0,0,0,0.5);">
+    <form onsubmit="return sendMessage(event)" style="display:flex;flex-direction:column;gap:18px;">
+      
+      <div style="position:relative;">
+        <input type="text" id="name" placeholder="Your Name" required 
+          style="width:100%;padding:14px 14px 14px 40px;border:none;border-radius:8px;background:#374151;color:#fff;outline:none;">
+        <span style="position:absolute;top:50%;left:12px;transform:translateY(-50%);color:#0ea5e9;">👤</span>
+      </div>
+
+      <div style="position:relative;">
+        <input type="email" id="email" placeholder="Your Email" required 
+          style="width:100%;padding:14px 14px 14px 40px;border:none;border-radius:8px;background:#374151;color:#fff;outline:none;">
+        <span style="position:absolute;top:50%;left:12px;transform:translateY(-50%);color:#0ea5e9;">✉️</span>
+      </div>
+
+      <div style="position:relative;">
+        <textarea id="message" rows="5" placeholder="Your Message" required 
+          style="width:100%;padding:14px 14px 14px 40px;border:none;border-radius:8px;background:#374151;color:#fff;outline:none;"></textarea>
+        <span style="position:absolute;top:15px;left:12px;color:#0ea5e9;">💬</span>
+      </div>
+
+      <button type="submit" 
+        style="padding:14px;border:none;border-radius:8px;background:#0ea5e9;color:#111827;font-weight:700;cursor:pointer;transition:.3s; font-size:1rem;">
+           Send Message
+      </button>
     </form>
-  </section>
+  </div>
+</section>
+
 
   <footer>
     <p>© 2025 Anmol Pandey | Designed with ❤️</p>
