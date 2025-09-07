@@ -39,22 +39,32 @@
     header .image{flex:1;min-width:250px;text-align:center;}
     header .image img{max-width:300px;border-radius:12px;border:5px solid #facc15;box-shadow:0 0 20px rgba(250,204,21,0.6);}
 
+    /* Header links/buttons */
+    .header-links a{
+      padding:10px 20px;
+      font-weight:600;
+      border-radius:6px;
+      text-decoration:none;
+      transition:.3s;
+    }
+    .header-links a:hover{
+      opacity:0.85;
+    }
+
     section{padding:80px 10%;}
 
     /* About Me */
     .about h2 {
-    font-size: 2rem;
-    color: #facc15;
-    margin-bottom: 20px; /* space below heading */
-}
-.about p {
-    max-width: 700px;
-    font-size: 1.15rem;
-    line-height: 1.8;
-    margin-bottom: 15px; /* space between paragraphs */
-}
-
-    .about p{max-width:700px; font-size:1.15rem;}
+      font-size: 2rem;
+      color: #facc15;
+      margin-bottom: 20px; /* space below heading */
+    }
+    .about p {
+      max-width: 700px;
+      font-size: 1.15rem;
+      line-height: 1.8;
+      margin-bottom: 15px; /* space between paragraphs */
+    }
 
     /* Skills Section */
     .skills h2{font-size:2rem; margin-bottom:10px; text-align:center; color:#facc15;}
@@ -154,17 +164,44 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <header>
-    <div class="text">
-      <h1>Hi, I'm Anmol Pandey ✨</h1>
-      <p>An MCA graduate learning Web Development.  
-         Skilled in HTML, CSS, JavaScript, Python, Java, DBMS, DSA, and MERN stack.  
-         I create interactive projects and continuously improve my coding skills.</p>
+<!-- Add this in <head> before your styles -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" 
+      integrity="sha512-...replace_with_actual_integrity..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Header Section -->
+<header>
+  <div class="text">
+    <h1>Hi, I'm Anmol Pandey ✨</h1>
+    <p>An MCA graduate learning Web Development.  
+       Skilled in HTML, CSS, JavaScript, Python, Java, DBMS, DSA, and MERN stack.  
+       I create interactive projects and continuously improve my coding skills.</p>
+
+    <!-- Resume & Social Icons -->
+    <div class="header-icons" style="margin-top:20px; display:flex; gap:20px; flex-wrap:wrap;">
+      <a href="https://portfolio-two-mauve-77.vercel.app/resume.pdf" target="_blank" 
+         style="font-size:2rem; color:#facc15;" title="Download Resume">
+         <i class="fas fa-file-download"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/anmol-pandey-681811269" target="_blank" 
+         style="font-size:2rem; color:#0ea5e9;" title="LinkedIn">
+         <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/anmol-psit" target="_blank" 
+         style="font-size:2rem; color:#fff;" title="GitHub">
+         <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.instagram.com/_anmolpandit?igsh=MTkyYnd0Yzd5OWx4dQ==" target="_blank" 
+         style="font-size:2rem; color:#e1306c;" title="Instagram">
+         <i class="fab fa-instagram"></i>
+      </a>
     </div>
-    <div class="image">
-      <img src="myphoto.jpg" alt="Profile Photo">
-    </div>
-  </header>
+  </div>
+  <div class="image">
+    <img src="myphoto.jpg" alt="Profile Photo">
+  </div>
+</header>
+
+
 
 <section id="about" class="about">
   <h2>About Me</h2>
@@ -179,8 +216,6 @@
     to real-world applications that make an impact.
   </p>
 </section>
-
-
 
   <section id="skills" class="skills">
     <h2>Skills</h2>
@@ -218,6 +253,7 @@
           <h3>Mini Music Player System</h3>
           <p>A simple yet interactive music player that allows users to play, pause, and navigate through songs with a clean UI.</p>
           <p><b>Tech Stack:</b> HTML, CSS, JavaScript</p>
+          <p><a href="https://music-player-website-chi.vercel.app" target="_blank" style="color:#facc15; text-decoration:underline;">Live Demo</a></p>
         </div>
       </div>
 
@@ -268,7 +304,6 @@
     </form>
   </div>
 </section>
-
 
   <footer>
     <p>© 2025 Anmol Pandey | Designed with ❤️</p>
