@@ -12,7 +12,7 @@
     nav a::after{content:"";position:absolute;left:0;bottom:-5px;width:0;height:2px;background:#facc15;transition:.3s;}
     nav a:hover::after{width:100%;}
 
-    /* Header with background image */
+    /* Header with background */
     header {
       display: flex;
       flex-wrap: wrap;
@@ -29,46 +29,22 @@
       top: 0; left: 0; right: 0; bottom: 0;
       background: rgba(0, 0, 0, 0.6);
     }
-    header .text, header .image {
-      position: relative;
-      z-index: 1;
-    }
+    header .text, header .image {position: relative; z-index: 1;}
     header .text{flex:1;min-width:300px;padding:20px;}
     header h1{font-size:3rem;margin-bottom:10px;color:#facc15;}
     header p{font-size:1.2rem;line-height:1.8;}
     header .image{flex:1;min-width:250px;text-align:center;}
     header .image img{max-width:300px;border-radius:12px;border:5px solid #facc15;box-shadow:0 0 20px rgba(250,204,21,0.6);}
 
-    /* Header links/buttons */
-    .header-links a{
-      padding:10px 20px;
-      font-weight:600;
-      border-radius:6px;
-      text-decoration:none;
-      transition:.3s;
-    }
-    .header-links a:hover{
-      opacity:0.85;
-    }
-
     section{padding:80px 10%;}
 
-    /* About Me */
-    .about h2 {
-      font-size: 2rem;
-      color: #facc15;
-      margin-bottom: 20px; /* space below heading */
-    }
-    .about p {
-      max-width: 700px;
-      font-size: 1.15rem;
-      line-height: 1.8;
-      margin-bottom: 15px; /* space between paragraphs */
-    }
+    /* About */
+    .about h2{font-size:2rem;color:#facc15;margin-bottom:20px;}
+    .about p{max-width:700px;font-size:1.15rem;line-height:1.8;margin-bottom:15px;}
 
-    /* Skills Section */
-    .skills h2{font-size:2rem; margin-bottom:10px; text-align:center; color:#facc15;}
-    .skills p{text-align:center; max-width:600px; margin:0 auto 30px; font-size:1.1rem; color:#cbd5e1;}
+    /* Skills */
+    .skills h2{font-size:2rem;margin-bottom:10px;text-align:center;color:#facc15;}
+    .skills p{text-align:center;max-width:600px;margin:0 auto 30px;font-size:1.1rem;color:#cbd5e1;}
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -96,9 +72,9 @@
       box-shadow: 0 10px 25px rgba(14,165,233,0.5);
     }
 
-    /* Projects Section */
+    /* Projects */
     .projects h2{font-size:2.2rem;margin-bottom:20px;color:#facc15;text-align:center;}
-    .projects p{text-align:center; max-width:600px; margin:0 auto 30px; font-size:1.1rem; color:#cbd5e1;}
+    .projects p{text-align:center;max-width:600px;margin:0 auto 30px;font-size:1.1rem;color:#cbd5e1;}
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -114,43 +90,42 @@
       box-shadow: 0 6px 18px rgba(0,0,0,0.4);
       transition: all 0.3s ease;
     }
-    .project:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 28px rgba(14,165,233,0.5);
-    }
-    .project img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-    .project-info {
-      padding: 20px;
-    }
-    .project-info h3 {
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-      color: #facc15;
-    }
-    .project-info p {
-      font-size: 1rem;
-      line-height: 1.5;
-      color: #cbd5e1;
-    }
+    .project:hover {transform: translateY(-8px);box-shadow: 0 12px 28px rgba(14,165,233,0.5);}
+    .project img {width: 100%;height: 180px;object-fit: cover;}
+    .project-info {padding: 20px;}
+    .project-info h3{font-size:1.3rem;margin-bottom:10px;color:#facc15;}
+    .project-info p{font-size:1rem;line-height:1.5;color:#cbd5e1;}
 
-    /* Contact Section */
-    .contact h2{text-align:center; font-size:2rem; color:#facc15;}
-    .contact p{text-align:center; max-width:600px; margin:10px auto 30px; font-size:1.1rem; color:#cbd5e1;}
-    .contact div{
-      background:#1f2937; padding:30px; border-radius:12px; max-width:600px; margin:auto; box-shadow:0 6px 18px rgba(0,0,0,0.5);
+    /* Contact */
+    .contact h2{text-align:center;font-size:2rem;color:#facc15;}
+    .contact p{text-align:center;max-width:600px;margin:10px auto 30px;font-size:1.1rem;color:#cbd5e1;}
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      background:#1f2937;
+      padding:30px;
+      border-radius:12px;
+      max-width:900px;
+      margin:auto;
+      box-shadow:0 6px 18px rgba(0,0,0,0.5);
     }
-    .contact form{display:flex;flex-direction:column;gap:18px;}
-    .contact input,.contact textarea{
-      width:100%;padding:14px 14px 14px 40px;border:none;border-radius:8px;background:#374151;color:#fff;outline:none;
+    .contact-info {flex:1;min-width:250px;}
+    .contact-info h3{margin-bottom:15px;color:#facc15;}
+    .contact-info p{margin-bottom:10px;color:#cbd5e1;font-size:1rem;}
+    .contact-socials {margin-top:15px;display:flex;gap:20px;}
+    .contact-socials a{color:#facc15;transition:.3s;}
+    .contact-socials a:hover{color:#0ea5e9;transform:scale(1.1);}
+    .contact-form {flex:1;min-width:280px;}
+    .contact-form form{display:flex;flex-direction:column;gap:18px;}
+    .contact-form input,.contact-form textarea {
+      width:100%;padding:14px;border:none;border-radius:8px;background:#374151;color:#fff;outline:none;
     }
-    .contact button{
-      padding:14px;border:none;border-radius:8px;background:#0ea5e9;color:#111827;font-weight:700;cursor:pointer;transition:.3s;font-size:1rem;
+    .contact-form button {
+      padding:14px;border:none;border-radius:8px;background:#0ea5e9;color:#111827;font-weight:700;
+      cursor:pointer;transition:.3s;font-size:1rem;
     }
-    .contact button:hover{background:#0284c7;}
+    .contact-form button:hover{background:#0284c7;}
 
     footer{text-align:center;padding:20px;background:#1f2937;margin-top:40px;}
   </style>
@@ -164,158 +139,123 @@
     <a href="#contact">Contact</a>
   </nav>
 
-<!-- Add this in <head> before your styles -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" 
-      integrity="sha512-...replace_with_actual_integrity..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- FontAwesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous"/>
 
-<!-- Header Section -->
+<!-- Header -->
 <header>
   <div class="text">
     <h1>Hi, I'm Anmol Pandey ✨</h1>
-    <p>An MCA graduate learning Web Development.  
-       Skilled in HTML, CSS, JavaScript, Python, Java, DBMS, DSA, and MERN stack.  
-       I create interactive projects and continuously improve my coding skills.</p>
+    <p>An MCA graduate learning Web Development. Skilled in HTML, CSS, JavaScript, Python, Java, DBMS, DSA, and MERN stack. I create interactive projects and continuously improve my coding skills.</p>
 
-    <!-- Resume & Social Icons -->
-    <div class="header-icons" style="margin-top:20px; display:flex; gap:20px; flex-wrap:wrap;">
-      <a href="https://portfolio-two-mauve-77.vercel.app/resume.pdf" target="_blank" 
-         style="font-size:2rem; color:#facc15;" title="Download Resume">
-         <i class="fas fa-file-download"></i>
+    <!-- Resume Button + Socials -->
+    <div class="header-icons" style="margin-top:20px; display:flex; gap:20px; flex-wrap:wrap; align-items:center;">
+      <a href="https://portfolio-two-mauve-77.vercel.app/resume.pdf" target="_blank"
+         style="padding:10px 20px; background:#2563eb; color:white; font-weight:bold;
+                border-radius:8px; text-decoration:none; font-size:1rem;">
+         Download Resume
       </a>
-      <a href="https://www.linkedin.com/in/anmol-pandey-681811269" target="_blank" 
-         style="font-size:2rem; color:#0ea5e9;" title="LinkedIn">
-         <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="https://github.com/anmol-psit" target="_blank" 
-         style="font-size:2rem; color:#fff;" title="GitHub">
-         <i class="fab fa-github"></i>
-      </a>
-      <a href="https://www.instagram.com/_anmolpandit?igsh=MTkyYnd0Yzd5OWx4dQ==" target="_blank" 
-         style="font-size:2rem; color:#e1306c;" title="Instagram">
-         <i class="fab fa-instagram"></i>
-      </a>
+      <a href="https://www.linkedin.com/in/anmol-pandey-681811269" target="_blank" style="font-size:2rem; color:#0ea5e9;" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/anmol-psit" target="_blank" style="font-size:2rem; color:#fff;" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/_anmolpandit?igsh=MTkyYnd0Yzd5OWx4dQ==" target="_blank" style="font-size:2rem; color:#e1306c;" title="Instagram"><i class="fab fa-instagram"></i></a>
     </div>
   </div>
-  <div class="image">
-    <img src="myphoto.jpg" alt="Profile Photo">
-  </div>
+  <div class="image"><img src="myphoto.jpg" alt="Profile Photo"></div>
 </header>
-
-
 
 <section id="about" class="about">
   <h2>About Me</h2>
-  <p>
-    Hi! I’m <b>Anmol Pandey</b>, an MCA graduate passionate about technology and coding.  
-    I’m currently learning <b>Web Development</b> with a focus on the <b>MERN stack</b>,  
-    while also strengthening my skills in <b>Java, DBMS, and DSA</b>.
-  </p>
-  <p>
-    I enjoy building projects that turn ideas into reality and love exploring new tools  
-    and technologies. My aim is to become a <b>full-stack developer</b> and contribute  
-    to real-world applications that make an impact.
-  </p>
+  <p>Hi! I’m <b>Anmol Pandey</b>, an MCA graduate passionate about technology and coding. I’m currently learning <b>Web Development</b> with a focus on the <b>MERN stack</b>, while also strengthening my skills in <b>Java, DBMS, and DSA</b>.</p>
+  <p>I enjoy building projects that turn ideas into reality and love exploring new tools and technologies. My aim is to become a <b>full-stack developer</b> and contribute to real-world applications that make an impact.</p>
 </section>
 
-  <section id="skills" class="skills">
-    <h2>Skills</h2>
-    <p>Here are the technologies and tools I work with:</p>
-    <div class="skills-grid">
-      <div class="skill">💻 Java</div>
-      <div class="skill">🗄️ DBMS</div>
-      <div class="skill">⚡ DSA</div>
-      <div class="skill">🐍 Python</div>
-      <div class="skill">🌐 MERN Stack</div>
-      <div class="skill">📝 SQL</div>
-      <div class="skill">📦 OOP Concepts</div>
-      <div class="skill">🎨 Web Development</div>
-    </div>
-  </section>
-
-  <section id="projects" class="projects">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-
-      <!-- Project 1 -->
-      <div class="project">
-        <img src="https://picsum.photos/400/200?random=21" alt="LearnEasy Project">
-        <div class="project-info">
-          <h3>LearnEasy – Online Tutorials & Job Notifications</h3>
-          <p>A web platform where students can learn from tutorials and stay updated with the latest job opportunities.</p>
-          <p><b>Tech Stack:</b> HTML, CSS, JavaScript</p>
-        </div>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="project">
-        <img src="https://picsum.photos/400/200?random=22" alt="Music Player Project">
-        <div class="project-info">
-          <h3>Mini Music Player System</h3>
-          <p>A simple yet interactive music player that allows users to play, pause, and navigate through songs with a clean UI.</p>
-          <p><b>Tech Stack:</b> HTML, CSS, JavaScript</p>
-          <p><a href="https://music-player-website-chi.vercel.app" target="_blank" style="color:#facc15; text-decoration:underline;">Live Demo</a></p>
-        </div>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="project">
-        <img src="https://picsum.photos/400/200?random=23" alt="Face Recognition Attendance System">
-        <div class="project-info">
-          <h3>Face Recognition Attendance System</h3>
-          <p>A smart attendance system that marks student attendance through face recognition technology.</p>
-          <p><b>Tech Stack:</b> Python, HTML, CSS, JavaScript</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-<section id="contact" class="contact">
-  <h2>Contact Me</h2>
-  <p style="text-align:center; max-width:600px; margin:10px auto 30px; font-size:1.1rem; color:#cbd5e1;">
-    Have a question or want to work together? Fill out the form below and I’ll get back to you soon!
-  </p>
-
-  <div style="background:#1f2937; padding:30px; border-radius:12px; max-width:600px; margin:auto; box-shadow:0 6px 18px rgba(0,0,0,0.5);">
-    <form onsubmit="return sendMessage(event)" style="display:flex;flex-direction:column;gap:18px;">
-      
-      <div style="position:relative;">
-        <input type="text" id="name" placeholder="Your Name" required 
-          style="width:100%;padding:14px 14px 14px 40px;border:none;border-radius:8px;background:#374151;color:#fff;outline:none;">
-        <span style="position:absolute;top:50%;left:12px;transform:translateY(-50%);color:#0ea5e9;">👤</span>
-      </div>
-
-      <div style="position:relative;">
-        <input type="email" id="email" placeholder="Your Email" required 
-          style="width:100%;padding:14px 14px 14px 40px;border:none;border-radius:8px;background:#374151;color:#fff;outline:none;">
-        <span style="position:absolute;top:50%;left:12px;transform:translateY(-50%);color:#0ea5e9;">✉️</span>
-      </div>
-
-      <div style="position:relative;">
-        <textarea id="message" rows="5" placeholder="Your Message" required 
-          style="width:100%;padding:14px 14px 14px 40px;border:none;border-radius:8px;background:#374151;color:#fff;outline:none;"></textarea>
-        <span style="position:absolute;top:15px;left:12px;color:#0ea5e9;">💬</span>
-      </div>
-
-      <button type="submit" 
-        style="padding:14px;border:none;border-radius:8px;background:#0ea5e9;color:#111827;font-weight:700;cursor:pointer;transition:.3s; font-size:1rem;">
-           Send Message
-      </button>
-    </form>
+<section id="skills" class="skills">
+  <h2>Skills</h2>
+  <p>Here are the technologies and tools I work with:</p>
+  <div class="skills-grid">
+    <div class="skill">💻 Java</div>
+    <div class="skill">🗄️ DBMS</div>
+    <div class="skill">⚡ DSA</div>
+    <div class="skill">🐍 Python</div>
+    <div class="skill">🌐 MERN Stack</div>
+    <div class="skill">📝 SQL</div>
+    <div class="skill">📦 OOP Concepts</div>
+    <div class="skill">🎨 Web Development</div>
   </div>
 </section>
 
-  <footer>
-    <p>© 2025 Anmol Pandey | Designed with ❤️</p>
-  </footer>
+<section id="projects" class="projects">
+  <h2>Projects</h2>
+  <div class="projects-grid">
+    <div class="project">
+      <img src="https://picsum.photos/400/200?random=21" alt="LearnEasy Project">
+      <div class="project-info">
+        <h3>LearnEasy – Online Tutorials & Job Notifications</h3>
+        <p>A web platform where students can learn from tutorials and stay updated with the latest job opportunities.</p>
+        <p><b>Tech Stack:</b> HTML, CSS, JavaScript</p>
+      </div>
+    </div>
+    <div class="project">
+      <img src="https://picsum.photos/400/200?random=22" alt="Music Player Project">
+      <div class="project-info">
+        <h3>Mini Music Player System</h3>
+        <p>A simple yet interactive music player that allows users to play, pause, and navigate through songs with a clean UI.</p>
+        <p><b>Tech Stack:</b> HTML, CSS, JavaScript</p>
+        <p><a href="https://music-player-website-chi.vercel.app" target="_blank" style="color:#facc15; text-decoration:underline;">Live Demo</a></p>
+      </div>
+    </div>
+    <div class="project">
+      <img src="https://picsum.photos/400/200?random=23" alt="Face Recognition Attendance System">
+      <div class="project-info">
+        <h3>Face Recognition Attendance System</h3>
+        <p>A smart attendance system that marks student attendance through face recognition technology.</p>
+        <p><b>Tech Stack:</b> Python, HTML, CSS, JavaScript</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <script>
-    function sendMessage(e){
-      e.preventDefault();
-      alert("Your message has been sent successfully!");
-      document.querySelector("form").reset();
-    }
-  </script>
+<!-- Final Contact Section -->
+<section id="contact" class="contact">
+  <h2>Contact Me</h2>
+  <p>Have a question or want to work together? Reach me directly or drop a message.</p>
+
+  <div class="contact-container">
+    <div class="contact-info">
+      <h3>Get In Touch</h3>
+      <p><i class="fas fa-envelope"></i> anmolpanndey@gmail.com</p>
+      <p><i class="fas fa-phone"></i> +91-7905726586</p>
+      <p><i class="fas fa-map-marker-alt"></i> Kanpur UP, India</p>
+      <div class="contact-socials">
+        <a href="https://www.linkedin.com/in/anmol-pandey-681811269" target="_blank"><i class="fab fa-linkedin" style="font-size:2rem;"></i></a>
+        <a href="https://github.com/anmol-psit" target="_blank"><i class="fab fa-github" style="font-size:2rem;"></i></a>
+        <a href="https://www.instagram.com/_anmolpandit?igsh=MTkyYnd0Yzd5OWx4dQ==" target="_blank"><i class="fab fa-instagram" style="font-size:2rem;"></i></a>
+        <a href="https://portfolio-two-mauve-77.vercel.app/resume.pdf" target="_blank"><i class="fas fa-file-alt" style="font-size:2rem;"></i></a>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <form onsubmit="return sendMessage(event)">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Anmol Pandey | Designed with ❤️</p>
+</footer>
+
+<script>
+  function sendMessage(e){
+    e.preventDefault();
+    alert("Your message has been sent successfully!");
+    document.querySelector("form").reset();
+  }
+</script>
 
 </body>
 </html>
